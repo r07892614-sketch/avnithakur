@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #1a0202;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Luxury Marble Overlay */
+.bg-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("logo.jpg") center/cover;
+  opacity: 0.22;
+  z-index: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  padding-top: 70px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: rgba(50, 0, 0, 0.52);
+  border: 1px solid rgba(255, 209, 148, 0.5);
+  backdrop-filter: blur(18px);
+  padding: 45px 28px;
+  border-radius: 26px;
+  box-shadow: 0 0 45px rgba(255, 170, 90, 0.15);
+  animation: drop 1s ease;
+}
+
+/* Title */
+h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffddb0, #ffaf78, #ffdb9b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subs {
+  margin-top: 6px;
+  opacity: 0.9;
+  font-size: 0.9rem;
+  color: #ffe7c8;
+}
+
+.info {
+  margin: 25px 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #ffdcb8;
+}
+
+.info strong {
+  color: #ffb778;
+}
+
+/* Timer */
+.timer-box p {
+  font-size: 0.85rem;
+  color: #ffce9f;
+}
+
+#timer {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #ffba70;
+  text-shadow: 0 0 18px #ffae68;
+}
+
+/* Button */
+#joinBtn {
+  margin-top: 30px;
+  padding: 13px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ffb05d, #ff8950, #ffb05d);
+  color: #3c0a00;
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: 0.4s ease;
+  animation: fadePulse 1.5s infinite alternate;
+}
+
+#joinBtn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 40px rgba(255, 160, 90, 0.7);
+}
+
+/* Animations */
+@keyframes drop {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadePulse {
+  from { opacity: 0.85; }
+  to   { opacity: 1; }
+}
+
+/* Mobile Fixing */
+@media (max-width: 460px) {
+  h1 { font-size: 1.55rem; }
+  #joinBtn {
+    padding: 11px 32px;
+    font-size: 0.95rem;
+  }
+}
